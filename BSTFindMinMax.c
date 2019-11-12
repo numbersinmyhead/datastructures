@@ -74,7 +74,6 @@ int FindMin (BSTNode *root)
 
 int FindMax(BSTNode *root)
 {
-
     if (root == NULL)
         return -1;
 
@@ -84,20 +83,43 @@ int FindMax(BSTNode *root)
     return root->data;
 }
 
+
+void FindMinRecursive(BSTNode *root)
+{
+    if (root == NULL)
+        return;
+    else if (root->left != NULL) 
+        FindMinRecursive(root->left);
+    else if (root->left == NULL)
+        printf ("Min data:%d", root->data);
+}
+
+void FindMaxRecursive(BSTNode *root)
+{
+    if (root == NULL)
+        return;
+    else if (root->right != NULL) 
+        FindMaxRecursive(root->right);
+    else if (root->right == NULL)
+        printf (", Max data:%d \n", root->data);
+}
+
 int main ()
 {
-    
    BSTNode *node = NULL;
    node = Insert (node, 152);
-   node = Insert (node, 1);
    node = Insert (node, 153);
-   node = Insert (node, 15);
-   node = Insert (node, 112);
-   node = Insert (node, 13);
-   //InOrderTraversal(node);
-
-   printf ("Min: %d", FindMin(node));
-   printf ("Max: %d", FindMax(node));
+   node = Insert (node, 1102);
+   node = Insert (node, 93);
+   node = Insert (node, 133);
+   node = Insert (node, 131);
+   InOrderTraversal(node);
+   printf ("\n");
+   //printf ("Min: %d", FindMin(node));
+   //printf ("Max: %d", FindMax(node));
+   FindMinRecursive(node);
+   FindMaxRecursive(node);
+   //printf ("Min Recursive: %d", node->data);
    return 0;
 }
 
