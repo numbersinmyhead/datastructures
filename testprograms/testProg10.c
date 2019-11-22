@@ -2,12 +2,14 @@
 #include <stdio.h>
 #include <string.h>
 
+//this code is for Caesar cipher
+//
 char rotate(const char in, char pivot, int offset)
 {
     return pivot + (in - pivot + offset) % 26;
 }
 
-void idk(const char *in, char *outbuf, int offset)
+void some_function(const char *in, char *outbuf, int offset)
 {
     int i;
     char *out = outbuf;
@@ -25,7 +27,7 @@ void idk(const char *in, char *outbuf, int offset)
 int main(int argc, char *argv[])
 {
     char *buf = strdup(argv[1]);
-    idk(buf, buf, 13);
+    some_function(buf, buf, 13);
     printf("%s\n", buf);
     free(buf);
     return 0;
