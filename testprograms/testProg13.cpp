@@ -35,7 +35,7 @@ struct node * findMin( struct node *n ){
 struct node * findNext( struct node *n ) {
     if (n == NULL)
         return NULL;
-    if (n->parent)
+    /*if (n->parent)
     {
         if (n->parent->left == n)
             return n->parent;
@@ -43,6 +43,7 @@ struct node * findNext( struct node *n ) {
             return n->right;
         else
             return n->left;
+        */
         /*if (n->parent->value >= n->value)
         {
             return n->parent;
@@ -53,11 +54,22 @@ struct node * findNext( struct node *n ) {
         }
         else
             return NULL;*/
+    if(n->right) {
+        return findMin(n->right);
     }
+    else {
+        for(; n->parent; n=n->parent) {
+            if(n->parent->left == n) {
+                return n->parent;
+            }
+        }
+        return NULL;
+    }
+    /*}
     else
     {
         return n->right;
-    }
+    }*/
 }
 
 // Test functions
