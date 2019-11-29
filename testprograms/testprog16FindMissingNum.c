@@ -2,6 +2,16 @@
 #include <assert.h>
 #include <stdio.h>
 
+/*
+ 1) Find middle element and check if it’s consistent.
+ 2) If middle element is consistent, then check if the difference between middle element and its next element is greater than 1 i.e. check if arr[mid + 1] – arr[mid] > 1
+     a) If yes, then arr[mid] + 1 is the missing element.
+     b) If not, then we have to scan the right half array from the middle element and jump to step-1.
+ 3) If middle element is inconsistent, then check if the difference between middle element and its previous element is greater than 1 i.e. check if arr[mid] – arr[mid – 1] > 1
+     a) If yes, then arr[mid] – 1 is the missing element.
+     b) If not, then we have to scan the left half array from the middle element and jump to step-1.
+ */
+
 //the code for this program should be tried by oneself first.
 //tehre are little complications.
 
