@@ -1,14 +1,14 @@
 /*
 
-          F 
+          F
        /     \
-      D       M 
+      D       M
      / \     / \
-    B   E   L   P 
+    B   E   L   P
    / \     /   /
-  A   C   H   S  
+  A   C   H   S
              / \
-            R   T 
+            R   T
 
 In-order traversal:
 A->B->C->D->E->F->H->L->M-P->R->S->T
@@ -35,7 +35,7 @@ node *next_node(node *current)
     {
         return NULL;
     }
-    
+
     if (current->left != NULL)
     {
         current->left = next_node (current->left);
@@ -46,8 +46,8 @@ node *next_node(node *current)
     {
         current->right = next_node (current->right);
     }
-        
-    next = current; 
+
+    next = current;
     return next;
 }
 
@@ -59,8 +59,3 @@ int main ()
 
 
 }
-
-
-
-
-

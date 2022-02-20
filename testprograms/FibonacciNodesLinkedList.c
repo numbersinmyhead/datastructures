@@ -68,7 +68,7 @@ void printLL(struct node *temp)
     }
     printf("\n");
 }
- 
+
 int main()
 {
     int arrayWithFibIndices[100] = {0};
@@ -81,7 +81,7 @@ int main()
         {
             printf ("series[%d]=%d.\n", i, series[i]);
         }
-        else 
+        else
         {
             //printf ("series[i-1]:%d, series[i-2]:%d", series[i-1], series[i-2]);
             series[i] = series[i - 1] + series[i - 2];
@@ -89,6 +89,3 @@ int main()
         }
     }
 }
-
-
-

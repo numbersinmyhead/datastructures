@@ -27,11 +27,10 @@ int main( int argc, char ** argv ) {
 
 #if 0
 output
-The size of the struct is 24 
-The size of the double is 8 
-The size of a integer is 4 
-The size of a character array is 3 
-The size of a void pointer is 8 
-The size of a integer array is 0 
+The size of the struct is 24
+The size of the double is 8
+The size of a integer is 4
+The size of a character array is 3
+The size of a void pointer is 8
+The size of a integer array is 0
 #endif
-
