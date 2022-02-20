@@ -10,7 +10,7 @@ int a( unsigned int i ) {
     int c = 0;
     while( i ) {
         if( i & 1 ) { //this is the trickiest part. 1 is referring to 000001 and not 11111. &'ing anything with 1 would result in zeroing of that value except for the LSB.
-            c++; 
+            c++;
         }
         i >>= 1;
     }
@@ -35,7 +35,7 @@ i think c wil be 2 if i is 5
 int main()
 {
     printf ("a returned:%d when i was 5\n", a(5));
-    
+
     printf ("a returned:%d when i was 10\n", a(10));
     printf ("a returned:%d when i was 15\n", a(15));
 }

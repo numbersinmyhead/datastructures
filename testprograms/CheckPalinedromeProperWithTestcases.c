@@ -61,5 +61,3 @@ bool isPalindrome(const char *str)
     }
     return true;
 }
-
-

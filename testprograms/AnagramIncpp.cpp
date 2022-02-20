@@ -30,5 +30,3 @@ int anagram ( const string s1, const string s2) {
 int main (int argc, char *argv[] ){
     printf("%d",anagram(argv[1],argv[2]));
 }
-
-

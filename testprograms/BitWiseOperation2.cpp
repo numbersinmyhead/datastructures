@@ -10,7 +10,7 @@ int a( unsigned int i ) {
     int c = 0;
     while( i ) {
         if( i & 1 ) { //this is the trickiest part. 1 is referring to 000001 and not 11111. &'ing anything with 1 would result in zeroing of that value except for the LSB.
-            c++; 
+            c++;
         }
         i >>= 1;
     }

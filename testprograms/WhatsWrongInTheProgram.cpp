@@ -23,4 +23,3 @@ int main (int argc, char ** argv) {
 }
 
 // in order to make the code work the NULL should be replaced by a new keyword.
-
